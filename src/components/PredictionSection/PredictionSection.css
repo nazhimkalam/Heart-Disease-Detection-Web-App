@@ -1,0 +1,84 @@
+.predictionSection > form {
+	display: flex;
+	margin: 20px;
+	width: 600px;
+	justify-content: space-around;
+}
+.predictionSection__right > p,
+.predictionSection__left > p {
+	display: flex;
+	padding: 5px;
+	font-weight: 700;
+	justify-content: space-between;
+}
+
+input {
+	width: 50px;
+	margin-left: 10px;
+}
+.predictionSection__predictBTN {
+	width: 100px;
+	font-size: 15px;
+	padding: 5px;
+	margin: 20px 0;
+	float: right;
+	background-color: rgb(0, 59, 185);
+	outline: none;
+	border-radius: 5px;
+	border: 2px blue solid;
+	cursor: pointer;
+	color: white;
+	font-weight: 600;
+}
+.predictionSection__range {
+	/* border: 1px grey solid; */
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.predictionSection__range > p {
+	font-weight: 700;
+	font-size: 17px;
+	padding-bottom: 25px;
+}
+
+.predictionSection__rangeScores{
+    display: flex;
+    flex-direction: column;
+	/* align-items: center; */
+	width: 650px;
+	border: 2px rgb(207, 208, 255) solid;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.predictionSection__rangeScores > p{
+    font-weight: 600;
+	font-size: 14px;
+	padding: 5px;
+}
+.predictionSection__rangeScores > p >span{
+	font-weight: 700;
+	color: blue;
+    font-size: 14px;
+}
+.predictionSection__resultPositive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 195, 195);
+    text-transform: uppercase;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.predictionSection__resultNegative{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(200, 255, 195);
+    text-transform: uppercase;
+    padding: 30px;
+    font-size: 20px;
+}
