@@ -69,7 +69,8 @@ input {
     justify-content: center;
     background-color: rgb(255, 195, 195);
     text-transform: uppercase;
-    padding: 30px;
+	padding: 30px;
+	margin: 40px;
     font-size: 20px;
 }
 
@@ -79,6 +80,7 @@ input {
     justify-content: center;
     background-color: rgb(200, 255, 195);
     text-transform: uppercase;
+	margin: 40px;
     padding: 30px;
     font-size: 20px;
 }

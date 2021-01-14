@@ -6,6 +6,7 @@
 
 # Make sure that all the following modules are already installed for use.
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Api, Resource, reqparse
 import joblib
 import numpy as np
@@ -15,6 +16,8 @@ import numpy as np
 
 
 APP = Flask(__name__)
+APP.config['CORS_HEADERS'] = 'Content-Type'
+CORS(APP)
 API = Api(APP)
 
 
