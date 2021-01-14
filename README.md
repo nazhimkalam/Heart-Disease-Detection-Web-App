@@ -3,4 +3,4 @@
         npm start
 
 ## Run the backend using the following code in the CMD
-        python app.py"# Heart-Disease-Detection-Web-App" 
+        python app.py
