@@ -1,0 +1,8 @@
+joblib==1.0.1
+requests==2.25.1
+Flask==1.1.2
+flask_cors==3.0.10
+flask_restful==0.3.8
+numpy==1.20.2
+sklearn
+gunicorn==19.9.0

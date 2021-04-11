@@ -1,19 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
 
 # Make sure that all the following modules are already installed for use.
+import joblib
+import numpy as np
 from flask import Flask
 from flask_cors import CORS
 from flask_restful import Api, Resource, reqparse
-import joblib
-import numpy as np
-
-
-# In[9]:
-
 
 APP = Flask(__name__)
 APP.config['CORS_HEADERS'] = 'Content-Type'
@@ -21,14 +12,7 @@ CORS(APP)
 API = Api(APP)
 
 
-# In[10]:
-
-
 HEART_DIAGNOSIS_MODEL = joblib.load('heart-diagnosing-model')
-
-
-# In[11]:
-
 
 class Predict(Resource):
 
@@ -60,50 +44,34 @@ class Predict(Resource):
         return out, 200
 
 
-# In[12]:
-
-
 API.add_resource(Predict, '/predict')
 
 if __name__ == '__main__':
-    APP.run(debug=True, port=1080)
+    APP.run(debug=True)
 
 
-# In[15]:
+# import requests
 
+# URL = 'http://127.0.0.1:1080/predict'  # localhost and the defined port + endpoint
 
-import requests
+# body = {
+#     "age": 44,
+#     "sex": 1,
+#     "cp": 5.5,
+#     "trestbps": 5.5,
+#     "chol": 5.5,
+#     "fbs": 5.5,
+#     "restecg": 5.3,
+#     "thalach": 1.3,
+#     "exang": 1.3,
+#     "oldpeak": 1.3,
+#     "slope": 5.6,
+#     "ca": 1.6,
+#     "thal": 1.6
+# }
 
-URL = 'http://127.0.0.1:1080/predict'  # localhost and the defined port + endpoint
-
-body = {
-    "age": 44,
-    "sex": 1,
-    "cp": 5.5,
-    "trestbps": 5.5,
-    "chol": 5.5,
-    "fbs": 5.5,
-    "restecg": 5.3,
-    "thalach": 1.3,
-    "exang": 1.3,
-    "oldpeak": 1.3,
-    "slope": 5.6,
-    "ca": 1.6,
-    "thal": 1.6
-}
-
-response = requests.post(URL, data=body)
-response.json()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
+# response = requests.post(URL, data=body)
+# response.json()
 
 
 

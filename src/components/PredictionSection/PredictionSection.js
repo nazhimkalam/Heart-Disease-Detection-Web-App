@@ -42,7 +42,7 @@ function PredictionSection() {
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(dataToSend),
 		};
-		fetch('http://127.0.0.1:1080/predict', requestOptions)
+		fetch('https://heart-disease-detect-backend.herokuapp.com/predict', requestOptions)
 			.then((response) => response.json())
 			.then((result) => setResult(result.Prediction));
 	};
